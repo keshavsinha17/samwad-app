@@ -1,0 +1,123 @@
+import React, { useEffect } from "react";
+import { IoHomeOutline } from "react-icons/io5";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { HiOutlineUser } from "react-icons/hi";
+import { FaHome, FaUser, FaBell } from "react-icons/fa";
+import "./nav.css";
+import { Helmet } from 'react-helmet';
+
+export const Navbar = () => {
+  useEffect(() => {
+    const list = document.querySelectorAll('.list');
+    
+      list.forEach(list => {
+        list.addEventListener('click', () => {
+          document.querySelector('.active')?.classList.remove('active');
+          list.classList.add('active')
+        }); 
+      });
+    });
+  return (
+    <>
+      <div className="fixed bottom-0 w-full">
+      <div className="relative w-full h-[60px] bg-white flex justify-center items-center rounded-xl px-2 navigation">
+        <ul className="flex w-full">
+          <li className="relative w-[33.3%] h-[60px] z-20 list">
+            <a href="#" className="relative flex justify-center items-center h-full w-full">
+              <span className="relative flex w-[55px] h-[55px] text-center items-center justify-center rounded-full text-2xl icon transition-all duration-500"><IoHomeOutline/></span>
+            </a>
+          </li>
+
+          <li className="relative w-[33.3%] h-[60px] z-20 list">
+            <a href="#" className="relative flex justify-center items-center h-full w-full">
+              <span className="relative flex w-[55px] h-[55px] text-center items-center justify-center rounded-full text-2xl icon transition-all duration-500"><IoMdNotificationsOutline/></span>
+            </a>
+          </li>
+
+          <li className="relative w-[33.3%] h-[60px] z-20 list transition-all ease-in-out duration-100">
+            <a href="#" className="relative flex justify-center items-center h-full w-full ">
+              <span className="relative flex w-[55px] h-[55px] text-center items-center justify-center rounded-full text-2xl transition-all duration-500 icon "><HiOutlineUser/></span>
+            </a>
+          </li>
+
+          {/* <div className="absolute top-[-32px] w-[70px] h-[70px] left-[32px] bg-white rounded-full z-10 transition-all duration-75 indicator">
+           </div> */}
+        </ul>
+      </div>
+      </div>
+      
+    </>
+  );
+};
+
+
+relative w-[17rem] my-[30px] mx-0 bg-red-500
+
+
+
+<div className="form-wrapper sign-up absolute top-0 left-0 flex justify-center items-center w-full h-full bg-white drop-shadow-2xl rounded-xl">
+            <form action="" className="w-[85%]">
+              <h2 className="text-[1.85rem] text-[#555] text-center font-bold">
+                Sign Up
+              </h2>
+
+              <div className="input-group relative w-[17rem] my-[30px] mx-0">
+                <input
+                  type="text"
+                  required
+                  className="w-full h-[40px] text-[16px] text-[#333] py-0 px-[10px] bg-transparent  "
+                />
+                <label
+                  htmlFor=""
+                  className="absolute  left-[5px] top-2 text-[15px] text-[#333] py-0 px-1 pointer-events-none transition-all ease-in-out duration-100"
+                >
+                  Username
+                </label>
+              </div>
+              <div className="input-group relative w-[17rem] my-[30px] mx-0">
+                <input
+                  type="email"
+                  required
+                  className="w-full h-[40px] text-[16px] text-[#333] py-0 px-[10px] bg-transparent  email"
+                />
+                <label
+                  htmlFor=""
+                  className="absolute  left-[5px] top-2 text-[15px] text-[#333] py-0 px-1 pointer-events-none transition-all ease-in-out duration-100"
+                >
+                  Email
+                </label>
+              </div>
+
+              <div className="input-group relative w-[17rem] my-[30px] mx-0">
+                <input
+                  type="password"
+                  required
+                  className="w-full h-[40px] text-[16px] text-[#333] py-0 px-[10px] bg-transparent "
+                />
+                <label
+                  htmlFor=""
+                  className="absolute  left-[5px] top-2 text-[15px] text-[#333] py-0 px-1 pointer-events-none transition-all ease-in-out duration-100"
+                >
+                  Password
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="btn relative top-0 left-0 w-full h-[40px] bg-primary-color text-[16px] text-white font-medium cursor-pointer rounded-md shadow-xl hover:scale-95 active:scale-95"
+              >
+                Sign Up
+              </button>
+              <div className="sign-link text-[14px] text-center my-[25px] mx-0">
+                <p className="text-[#333]">
+                  Already have an account?{" "}
+                  <a
+                    href="#"
+                    className="text-primary-color font-semibold hover:decoration-dashed"
+                  >
+                    Sign In
+                  </a>
+                </p>
+              </div>
+            </form>
+          </div>

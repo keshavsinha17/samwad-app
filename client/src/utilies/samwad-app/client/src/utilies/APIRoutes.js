@@ -1,0 +1,9 @@
+const host = "http://localhost:8080";
+export const signUpRoute=`${host}/api/auth/signUp`;
+export const loginRoute = `${host}/api/auth/login`;
+export const setAvatarRoute = `${host}/api/auth/avatar`;
+export const ForgetRoute = `${host}/api/auth/forget-password`;
+export const setOnlineRoute = `${host}/api/auth/online`;
+export const resultRoute = `${host}/api/auth/result`;
+// export const resultRoute = `${host}/api/auth/result`;
+// export const logoutRoute = `${host}/api/auth/logout`;
