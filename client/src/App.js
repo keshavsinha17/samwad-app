@@ -27,10 +27,7 @@ function App() {
             path="/"
             element={
               <>
-                <Hero />
-                <Particle />
-                <Team />
-                <Contact/>
+                <Home/>
               </>
             }
           ></Route>
