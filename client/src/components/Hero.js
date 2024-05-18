@@ -11,11 +11,11 @@ import {
 import { setOnlineRoute} from "../utilies/APIRoutes";
 
 export const Hero = () => {
-  const navigate=useNavigate();
-  useEffect( () => {
-    if (!localStorage.getItem("sanwad-app"))
-      navigate("/login");
-  },[]);
+  // const navigate=useNavigate();
+  // useEffect( () => {
+  //   if (!localStorage.getItem("sanwad-app"))
+  //     navigate("/login");
+  // },[]);
   
   const [text1] = useTypewriter({
     words : ['Locate...', 'Chat...' , 'Repeat...'],
